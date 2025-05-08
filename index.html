@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aniversário da Vovó!</title>
+  <title>Aniversário da Dindinha!</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,30 +13,57 @@
       padding: 0;
       text-align: center;
     }
+
     header {
       background-color: #ffb6c1;
       padding: 20px;
     }
+
     h1 {
       margin: 0;
       color: #fff;
     }
+
+    .intro {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+      padding: 0 20px;
+    }
+
+    .intro .highlight {
+      font-size: 24px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
     .container {
       padding: 20px;
     }
+
     .gift {
       border: 1px solid #ddd;
       border-radius: 10px;
       padding: 15px;
-      margin: 15px auto;
-      max-width: 400px;
+      margin: 0 auto;
       background-color: #fff;
-    }
-    .gift img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 100%;
-      border-radius: 8px;
+      max-width: 280px;
+      text-align: center;
     }
-    .gift a {
+
+    .gift img {
+      width: auto;
+      max-width: 100%;
+      max-height: 200px;
+      height: auto;
+    }
+
+    .gift button {
       display: inline-block;
       margin-top: 10px;
       text-decoration: none;
@@ -44,44 +71,198 @@
       color: white;
       padding: 10px 15px;
       border-radius: 5px;
+      cursor: pointer;
     }
+
     footer {
       margin-top: 30px;
       font-size: 0.9em;
       color: #777;
     }
+
+    .gift-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      justify-content: center;
+      padding: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    #dadosUsuario {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #dadosUsuario input,
+    #dadosUsuario textarea {
+      width: 100%;
+      max-width: 250px;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-button {
+      padding: 10px 15px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .form-button:disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 768px) {
+      .gift img {
+        max-width: 200px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>🎉 Aniversário da Vovó Maria 🎂</h1>
+    <h1>🎉 Aniversário da Dindinha 🎂</h1>
     <p>Ajude a tornar esse dia mais especial com um presente!</p>
   </header>
 
-  <div class="container">
+  <div class="intro">
+    <p><span class="highlight">Lista de presentes virtuais</span>compre com comodidade e segurança!</p>
+  </div>
+
+  <div class="gift-container">
     <div class="gift">
-      <h2>Jogo de Lençol Floral</h2>
-      <img src="https://via.placeholder.com/400x200?text=Jogo+de+Len%C3%A7ol" alt="Jogo de Lençol">
-      <p>Ela adora flores! Você pode comprar direto no link abaixo:</p>
-      <a href="https://www.americanas.com.br/" target="_blank">Comprar</a>
+      <img src="img.png" alt="Jarra de suco">
+      <button onclick="abrirFormulario('Jarra de suco', '58.00')">Comprar</button>
     </div>
 
     <div class="gift">
-      <h2>Cesta de Café da Manhã</h2>
-      <img src="https://via.placeholder.com/400x200?text=Cesta+de+Caf%C3%A9" alt="Cesta de Café">
-      <p>Ela ama começar o dia com carinho. Veja a opção abaixo:</p>
-      <a href="https://www.mercadolivre.com.br/" target="_blank">Comprar</a>
+      <img src="img115.png" alt="Jogo de lençol">
+      <button onclick="abrirFormulario('Jogo de lençol', '115.00')">Comprar</button>
     </div>
 
     <div class="gift">
-      <h2>Pix para escolher o presente</h2>
-      <img src="https://via.placeholder.com/400x200?text=Pix+da+Vov%C3%B3" alt="Pix">
-      <p>Se preferir, envie um PIX para a vovó: <strong>vovo.maria@pix.com</strong></p>
+      <img src="img150.png" alt="Kit de almofadas e manta">
+      <button onclick="abrirFormulario('Kit de almofadas e manta', '150.00')">Comprar</button>
     </div>
+
+    <div class="gift">
+      <img src="img200.png" alt="Espremedor de frutas">
+      <button onclick="abrirFormulario('Espremedor de frutas', '200.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img240.png" alt="Kit potes">
+      <button onclick="abrirFormulario('Kit potes', '240.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img280.png" alt="Jogo de toalhas">
+      <button onclick="abrirFormulario('Jogo de toalhas', '280.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img308.png" alt="Churrasqueira elétrica">
+      <button onclick="abrirFormulario('Churrasqueira elétrica', '308.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img470.png" alt="Lavador de alta pressão">
+      <button onclick="abrirFormulario('Lavador de alta pressão', '470.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img540.png" alt="Edredom Quenn">
+      <button onclick="abrirFormulario('Edredom Quenn', '540.00')">Comprar</button>
+    </div>
+  </div>
+
+  <div id="formulario" style="display: none; padding: 20px;">
+    <h2>Preencha seus dados</h2>
+    <form id="dadosUsuario">
+      <input type="text" placeholder="Nome completo" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <input type="text" placeholder="CPF" required><br>
+      <input type="tel" placeholder="Telefone" required><br>
+      <textarea placeholder="Mensagem para a Dindinha 💬" rows="4" cols="40"></textarea><br>
+      <button type="button" class="form-button" onclick="proximoPasso()">Próximo passo</button>
+    </form>
+  </div>
+
+  <div id="resumo" style="display: none; padding: 20px;">
+    <h2>Resumo da Compra</h2>
+    <div id="resumoConteudo" style="text-align: left; max-width: 400px; margin: 0 auto; border: 1px solid #ccc; border-radius: 10px; padding: 15px; background: #fff;">
+    </div>
+    <br>
+    <button type="button" onclick="mostrarPix()" class="form-button">Finalizar com PIX</button>
+  </div>
+
+  <div id="pix" style="display: none; padding: 20px;">
+    <h2>Pagamento</h2>
+    <p>Envie o valor para a chave PIX abaixo:</p>
+    <p><strong>Dindinha@pix.com</strong></p>
+    <p>Por favor, realize o pagamento para a chave PIX acima. Assim que o pagamento for feito, clique em "Confirmar pagamento".</p>
+    <button type="button" onclick="confirmarPagamento()" class="form-button">Confirmar pagamento</button>
   </div>
 
   <footer>
     <p>Obrigada por fazer parte deste momento especial! 💖</p>
   </footer>
+
+  <script>
+    let presenteSelecionado = '';
+
+    function abrirFormulario(nomePresente, preco) {
+      presenteSelecionado = `${nomePresente} - R$ ${preco}`;
+      document.getElementById('formulario').style.display = 'block';
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function proximoPasso() {
+      const form = document.getElementById('dadosUsuario');
+      const inputs = form.querySelectorAll('input, textarea');
+      const dados = {};
+
+      inputs.forEach(input => {
+        dados[input.placeholder] = input.value;
+      });
+
+      const resumoHTML = `
+        <p><strong>Presente escolhido:</strong> ${presenteSelecionado}</p>
+        <img src="https://via.placeholder.com/400x200?text=${encodeURIComponent(presenteSelecionado)}" style="width: 100%; border-radius: 8px;"><br><br>
+        <p><strong>Nome:</strong> ${dados['Nome completo']}</p>
+        <p><strong>Email:</strong> ${dados['Email']}</p>
+        <p><strong>CPF:</strong> ${dados['CPF']}</p>
+        <p><strong>Telefone:</strong> ${dados['Telefone']}</p>
+        <p><strong>Mensagem:</strong> ${dados['Mensagem para a Dindinha 💬']}</p>
+      `;
+
+      document.getElementById('resumoConteudo').innerHTML = resumoHTML;
+      document.getElementById('formulario').style.display = 'none';
+      document.getElementById('resumo').style.display = 'block';
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function mostrarPix() {
+      document.getElementById('resumo').style.display = 'none';
+      document.getElementById('pix').style.display = 'block';
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function confirmarPagamento() {
+      alert('Pagamento confirmado. Obrigada!');
+    }
+  </script>
 </body>
 </html>
