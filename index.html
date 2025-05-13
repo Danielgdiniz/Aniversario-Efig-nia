@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aniversário da Dindinha!</title>
+  <link rel="icon" href="logo.webp" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,13 +19,24 @@
     }
 
     header {
-      background-color: #ffb6c1;
+      background-color: #f7ddf6;
       padding: 20px;
     }
 
     h1 {
       margin: 0;
-      color: #fff;
+      color: #3d3c3ca5;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    h4{
+      color: #3d3c3ca5;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .subtitulo {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 20px;
+      color: #3d3c3ca5;
+      margin: 10px 0;
     }
 
     .intro {
@@ -67,19 +82,59 @@
       display: inline-block;
       margin-top: 10px;
       text-decoration: none;
-      background-color: #ff69b4;
+      background-color: #4fa361;
       color: white;
       padding: 10px 15px;
       border-radius: 5px;
-      cursor: pointer;
+      cursor: pointer;  
     }
 
     footer {
       margin-top: 30px;
       font-size: 0.9em;
-      color: #777;
+      color: #5b5b5b;
+      
     }
-
+    .endereco{
+      margin-top: 0px;
+      background: #1d1d1d;
+      color: #d4d4d4;
+      padding-bottom: 50px;
+    }
+    .tituloFooter {
+      font-size: 40px; 
+      font-weight: bold; /* Se desejar que o h6 fique em negrito */
+      text-align: left;
+      margin-left: 180px;
+      margin-bottom: 5px;
+      font-family: 'Cormorant Garamond', serif;
+      padding-top: 30px;
+    }
+    .buffetNome{
+      font-family: 'Great Vibes', cursive;
+      font-size: 25px;
+      color: #d4d4d4; /* ou a cor que quiser */
+      margin-left: 180px; /* manter o alinhamento do resto, se necessário */
+      text-align: left;
+    }
+    .endereco .data, .endereco .local, .endereco .endereco-completo {
+      text-align: left;
+      font-size: 15px; /* Ajuste o tamanho conforme necessário */
+      padding: 0px;
+      margin-left: 180px;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .endereco p:last-child, .endereco .endereco-completo:last-child {
+      margin-bottom: 0px; /* Remove a margem inferior do último item */
+    }
+    .direitosFooter{
+      background-color: #454545;
+      color: #aaa;
+      font-size: 14px;
+      text-align: center;
+      padding: 15px 0px;
+      margin-top: 0px;
+    }
     .gift-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -134,7 +189,12 @@
 <body>
   <header>
     <h1>🎉 Aniversário da Dindinha 🎂</h1>
-    <p>Ajude a tornar esse dia mais especial com um presente!</p>
+    <p class="subtitulo">22 . 06 . 2025</p>
+    <p><img src="imgPrincipal.png" alt="Imagem de Aniversário" style="max-width: 100%; height: auto;"></p>
+    <strong>Queridos familiares e amigos,</strong>
+    <p>Neste dia tão especial, a sua presença será, sem dúvida, o maior presente que eu poderia receber.</p>
+    <p>Mas, caso queira levar uma lembrança, deixo aqui algumas sugestões com muito carinho. Ficarei imensamente grata!</p>
+    <h4>Efigênia Fernandes Guimarães</h4>
   </header>
 
   <div class="intro">
@@ -178,13 +238,58 @@
     </div>
 
     <div class="gift">
-      <img src="img470.png" alt="Lavador de alta pressão">
-      <button onclick="abrirFormulario('Lavador de alta pressão', '470.00')">Comprar</button>
+      <img src="img350.png" alt="Batedeira planetária">
+      <button onclick="abrirFormulario('Batedeira planetária', '350.00')">Comprar</button>
     </div>
 
     <div class="gift">
-      <img src="img540.png" alt="Edredom Quenn">
-      <button onclick="abrirFormulario('Edredom Quenn', '540.00')">Comprar</button>
+      <img src="img470.png" alt="Lavador de alta pressão">
+      <button onclick="abrirFormulario('Lavador de alta pressão', '479.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img540.png" alt="Edredom Queen">
+      <button onclick="abrirFormulario('Edredom Queen', '540.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img550.png" alt="Air Fryer">
+      <button onclick="abrirFormulario('Air Fryer', '550.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img680.png" alt="Passadeira a vapor">
+      <button onclick="abrirFormulario('Passadeira a vapor', '680.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img700.png" alt="Queijo e doces">
+      <button onclick="abrirFormulario('Queijo e doces', '700.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img800.png" alt="Rack para TV">
+      <button onclick="abrirFormulario('Rack para TV', '800.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img950.png" alt="Kit de lustres e luminárias">
+      <button onclick="abrirFormulario('Kit de lustres e luminárias', '950.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img1150.png" alt="Poltrona">
+      <button onclick="abrirFormulario('Poltrona', '1150.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img2000.png" alt="Smart TV 50'">
+      <button onclick="abrirFormulario('Smart TV 50Pol', '2000.00')">Comprar</button>
+    </div>
+
+    <div class="gift">
+      <img src="img2400.png" alt="Sofa retrátil">
+      <button onclick="abrirFormulario('Sofa retrátil', '2400.00')">Comprar</button>
     </div>
   </div>
 
@@ -219,50 +324,95 @@
   <footer>
     <p>Obrigada por fazer parte deste momento especial! 💖</p>
   </footer>
-
+     <footer class="endereco">
+      <p class="tituloFooter">Localização:</p>
+      <p class="buffetNome">Surreal  Buffet</p>
+      <p class="data">22/06/2025, Domingo às 16:00</p>
+      <p class="local">Endereço: R. dos Coqueiros, 1712 - Campestre, Santo André - SP, 09080-010</p>
+  </footer>
+  <footer class="direitosFooter">
+  <p>© 2025 Daniel Guimarães Diniz<br><br>Todos os direitos reservados.</p>
+</footer>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    let presenteSelecionado = '';
+  emailjs.init('qr6t9X2Ji_d8JELcw');
 
-    function abrirFormulario(nomePresente, preco) {
-      presenteSelecionado = `${nomePresente} - R$ ${preco}`;
-      document.getElementById('formulario').style.display = 'block';
-      window.scrollTo(0, document.body.scrollHeight);
+  let presenteSelecionado = '';
+
+  function abrirFormulario(nomePresente, preco) {
+    presenteSelecionado = {
+      nome: nomePresente,
+      preco: preco,
+      imagem: event.target.parentElement.querySelector('img').src
+  };
+    document.getElementById('formulario').style.display = 'block';
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+  function proximoPasso() {
+    const form = document.getElementById('dadosUsuario');
+    const inputs = form.querySelectorAll('input, textarea');
+    const dados = {};
+
+  for (let input of inputs) {
+    if (input.hasAttribute('required') && !input.value.trim()) {
+      alert('Por favor, preencha todos os campos obrigatórios.');
+      input.focus();
+      return;
     }
+   dados[input.placeholder] = input.value;
+  }
 
-    function proximoPasso() {
-      const form = document.getElementById('dadosUsuario');
-      const inputs = form.querySelectorAll('input, textarea');
-      const dados = {};
+    const resumoHTML = `
+      <p><strong>Presente escolhido:</strong> ${presenteSelecionado.nome}- R$ ${presenteSelecionado.preco}</p></p>
+      <img src="${presenteSelecionado.imagem}" style="max-width: 200px; height: auto; border-radius: 8px;">
+      <p><strong>Nome:</strong> ${dados['Nome completo']}</p>
+      <p><strong>Email:</strong> ${dados['Email']}</p>
+      <p><strong>CPF:</strong> ${dados['CPF']}</p>
+      <p><strong>Telefone:</strong> ${dados['Telefone']}</p>
+      <p><strong>Mensagem:</strong> ${dados['Mensagem para a Dindinha 💬']}</p>
+    `;
 
-      inputs.forEach(input => {
-        dados[input.placeholder] = input.value;
+    document.getElementById('resumoConteudo').innerHTML = resumoHTML;
+    document.getElementById('formulario').style.display = 'none';
+    document.getElementById('resumo').style.display = 'block';
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+  function mostrarPix() {
+    document.getElementById('resumo').style.display = 'none';
+    document.getElementById('pix').style.display = 'block';
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+  function confirmarPagamento() {
+    const form = document.getElementById('dadosUsuario');
+    const inputs = form.querySelectorAll('input, textarea');
+    const dados = {};
+
+    inputs.forEach(input => {
+      dados[input.placeholder] = input.value;
+    });
+
+    // Dados para o EmailJS (usando os nomes das variáveis do template)
+    const emailParams = {
+      presente: `${presenteSelecionado.nome} - R$ ${presenteSelecionado.preco}`,
+      nome: dados['Nome completo'],
+      email: dados['Email'],
+      cpf: dados['CPF'],
+      telefone: dados['Telefone'],
+      mensagem: dados['Mensagem para a Dindinha 💬']
+    };
+
+    emailjs.send('service_oghz5qn', 'template_jbtqlcq', emailParams)
+      .then(function(response) {
+        console.log('Sucesso:', response);
+        alert('Pagamento confirmado. Obrigada!');
+      }, function(error) {
+        console.log('Erro:', error);
+        alert('Houve um erro ao enviar o e-mail.');
       });
-
-      const resumoHTML = `
-        <p><strong>Presente escolhido:</strong> ${presenteSelecionado}</p>
-        <img src="https://via.placeholder.com/400x200?text=${encodeURIComponent(presenteSelecionado)}" style="width: 100%; border-radius: 8px;"><br><br>
-        <p><strong>Nome:</strong> ${dados['Nome completo']}</p>
-        <p><strong>Email:</strong> ${dados['Email']}</p>
-        <p><strong>CPF:</strong> ${dados['CPF']}</p>
-        <p><strong>Telefone:</strong> ${dados['Telefone']}</p>
-        <p><strong>Mensagem:</strong> ${dados['Mensagem para a Dindinha 💬']}</p>
-      `;
-
-      document.getElementById('resumoConteudo').innerHTML = resumoHTML;
-      document.getElementById('formulario').style.display = 'none';
-      document.getElementById('resumo').style.display = 'block';
-      window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function mostrarPix() {
-      document.getElementById('resumo').style.display = 'none';
-      document.getElementById('pix').style.display = 'block';
-      window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function confirmarPagamento() {
-      alert('Pagamento confirmado. Obrigada!');
-    }
-  </script>
+  }
+</script>
 </body>
 </html>
